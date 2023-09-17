@@ -15,7 +15,6 @@ const Home = () =>{
 	console.log(productList)
 	return(
 		<div>
-			<Navbar/>
 			<h1>Platzi and Next.js</h1>
 			<h4>Avocatos: {length}</h4>
 			{productList.map(product=>{
