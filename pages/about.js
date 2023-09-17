@@ -1,9 +1,13 @@
 import React from "react";
+import {Navbar} from "../components/Navbar/Navbar";
 
 const About = ()=>{
 	return (
 		<div>
-		Esta pagina es about
+			<Navbar/>
+			<p>
+				Esta pagina es about
+			</p>
 		</div>
 	)
 }
