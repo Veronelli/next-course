@@ -12,7 +12,7 @@ import Document, {
       return (
         <Html lang="en">
           <Head />
-          <body className='body-class'>
+          <body className='w-10/12 m-auto'>
             <Main />
             <NextScript />
           </body>

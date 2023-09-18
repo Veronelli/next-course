@@ -1,5 +1,6 @@
 import App, { AppContext, AppInitialProps, AppProps } from 'next/app'
 import Layout from 'components/Layout'
+import "globals.css"
 
 type AppOwnProps = { example: string }
  

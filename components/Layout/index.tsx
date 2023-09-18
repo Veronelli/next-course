@@ -4,10 +4,12 @@ import style from "./layout.module.css"
 
 const Layout: React.FC = ({children}:React.PropsWithChildren) =>{
     return(
-        <div className={style.container }>
+        <div className={`${style.container} flex-col`}>
             <Navbar/>
-            {children}
-            <footer className="text">
+            <article className="flex-grow-0">
+                {children}
+            </article>
+            <footer className="text absolute bottom-0 bg-slate-600 w-10/12">
                 This is the footer
             </footer>
         <style jsx>

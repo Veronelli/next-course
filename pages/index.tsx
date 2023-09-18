@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { Navbar } from "@components/Navbar";
 
 const Home = () =>{
 	const [productList, setProductList] = useState([]);
@@ -12,7 +11,6 @@ const Home = () =>{
 			setLength(length)
 		})
 	},[]);
-	console.log(productList)
 	return(
 		<div>
 			<h1>Platzi and Next.js</h1>
