@@ -1,26 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
+import { ListAvocadosProvider } from "contexts/ListContext";
+import { ListProducts } from "components/ListProducts";
 
 const Home = () =>{
-	const [productList, setProductList] = useState([]);
-	const [length, setLength] = useState(0);
-	useEffect(()=>{
-		window.fetch('/api/avo')
-		.then(res=>res.json())
-		.then(({data, length}) =>{
-			setProductList(data);
-			setLength(length)
-		})
-	},[]);
 	return(
 		<div>
-			<h1>Platzi and Next.js</h1>
-			<h4>Avocatos: {length}</h4>
-			{productList.map(product=>{
-				return (
-				<div>
-					{product.name}
-				</div>)
-			})}
+			<ListAvocadosProvider>
+				<ListProducts></ListProducts>
+			</ListAvocadosProvider>
+			
 		</div>
 	)
 }

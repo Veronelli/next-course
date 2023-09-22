@@ -9,7 +9,7 @@ const Layout: React.FC = ({children}:React.PropsWithChildren) =>{
             <article className="flex-grow-0">
                 {children}
             </article>
-            <footer className="text absolute bottom-0 bg-slate-600 w-10/12">
+            <footer className="text absolute mt-10 bg-slate-600 w-10/12">
                 This is the footer
             </footer>
         <style jsx>
