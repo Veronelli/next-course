@@ -1,4 +1,5 @@
 import Database from "@database"
+import { TProduct } from "types/Product";
 
 async function getListAvocados(): Promise<any[]>{
     const avoDatabase = new Database();
@@ -6,12 +7,16 @@ async function getListAvocados(): Promise<any[]>{
     return listAvocados;
 }
 
-// class ProductHandeler{
-//     async getProducts(storageName: string){
-//         return await localStorage.getItem(storageName) 
-//     }
+class ProductHandeler{
+    async getProducts(storageName: string): Promise<Array<TProduct>> {
+        const dataString = await localStorage.getItem(storageName);
+        return JSON.parse(dataString); 
+    }
 
-//     async setProduct(storageName: string, product: )
-// }
+    async setProduct(storageName: string, product: TProduct): Promise<void>{
+        const dataString = JSON.stringify(product)
+        localStorage.setItem(storageName, dataString);
+    }
+}
 
-export {getListAvocados}
+export {getListAvocados, ProductHandeler}
