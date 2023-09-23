@@ -1,8 +1,9 @@
 import React from "react";
 import { getListAvocados } from "./utils";
+import { TProduct } from "types/Product";
 
-interface IListContext {
-    listAvocados?: any[]
+export interface IListContext {
+    listAvocados?: Array<TProduct>
     length?: number
 }
 

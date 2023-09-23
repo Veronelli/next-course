@@ -6,4 +6,12 @@ async function getListAvocados(): Promise<any[]>{
     return listAvocados;
 }
 
+// class ProductHandeler{
+//     async getProducts(storageName: string){
+//         return await localStorage.getItem(storageName) 
+//     }
+
+//     async setProduct(storageName: string, product: )
+// }
+
 export {getListAvocados}

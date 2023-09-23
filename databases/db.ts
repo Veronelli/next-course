@@ -7,7 +7,7 @@ class Database {
   constructor() {}
 
   async getAll(): Promise<any[]> {
-    const asArray = Object.values(allData)
+    const asArray = allData
     await randomDelay()
     return asArray
   }

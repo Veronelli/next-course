@@ -1,5 +1,7 @@
-const data: Record<TProductId, TProduct> = {
-  '2zd33b8c': {
+import { TProduct } from "types/Product"
+
+const data: Array<TProduct> = [
+  {
     name: 'Maluma Hass Avocado',
     id: '2zd33b8c',
     sku: 'NUR72KCM',
@@ -11,9 +13,9 @@ const data: Record<TProductId, TProduct> = {
       shape: 'Oval',
       hardiness: '1 °C',
       taste: 'Catchy, is an avocado',
-    },
+    }
   },
-  '6trfgkkj': {
+  {
     name: 'Fuerte Avocado',
     id: '6trfgkkj',
     sku: 'AX4M8SJV',
@@ -27,7 +29,7 @@ const data: Record<TProductId, TProduct> = {
       taste: 'Magnificent, is a strong avocado',
     },
   },
-  '7bcr49em': {
+    {
     name: 'Gwen Hass Avocado',
     id: '7bcr49em',
     sku: 'HYA78F6J',
@@ -41,7 +43,7 @@ const data: Record<TProductId, TProduct> = {
       taste: 'Superb, is an avocado',
     },
   },
-  '098323ks': {
+  {
     name: 'Bacon Avocado',
     id: '098323ks',
     sku: 'BXD100BLK',
@@ -53,9 +55,8 @@ const data: Record<TProductId, TProduct> = {
       shape: 'Oval',
       hardiness: '−5 °C',
       taste: 'Creamy, is an avocado',
-    },
-  },
-  b8uthe2y: {
+    },},
+    {
     name: 'Hass Avocado',
     id: 'b8uthe2y',
     sku: 'RMRCZN7E',
@@ -67,9 +68,8 @@ const data: Record<TProductId, TProduct> = {
       shape: 'Oval',
       hardiness: '−1 °C',
       taste: 'Gorgeous, is an avocado',
-    },
-  },
-  ewxsd6xb: {
+    },},
+    {
     name: 'Lamb Hass Avocado',
     id: 'ewxsd6xb',
     sku: 'N55229ZA',
@@ -81,9 +81,8 @@ const data: Record<TProductId, TProduct> = {
       shape: 'Obovate',
       hardiness: '-2 °C',
       taste: 'Great, is an avocado',
-    },
-  },
-  fpr72m9k: {
+    },},
+    {
     name: 'Pinkerton Avocado',
     id: 'fpr72m9k',
     sku: 'B4HZ42TM',
@@ -97,7 +96,7 @@ const data: Record<TProductId, TProduct> = {
       taste: 'Marvelous, is an avocado',
     },
   },
-  t9dv25gs: {
+  {
     name: 'Reed Avocado',
     id: 't9dv25gs',
     sku: 'ZY3T9XXC',
@@ -109,9 +108,8 @@ const data: Record<TProductId, TProduct> = {
       shape: 'Round',
       hardiness: '−1 °C',
       taste: 'Exquisite, is an avocado',
-    },
-  },
-  t345w48y: {
+    }},
+    {
     name: 'Zutano Avocado',
     id: 't345w48y',
     sku: 'MW79ZZ6Y',
@@ -125,6 +123,6 @@ const data: Record<TProductId, TProduct> = {
       taste: 'Splendid, is an avocado',
     },
   },
-}
+]
 
-export default data
+export default data;
