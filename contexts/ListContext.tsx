@@ -14,9 +14,9 @@ function ListAvocadosProvider({children}){
     const [length, setLength] = React.useState(0);
 
     React.useEffect(()=>{
-        getListAvocados().then((res)=>{
-            setListAvocados(res);
-            setLength(res.length);
+        fetch("/api/avo").then(res=>res.json()).then(data=>{
+            setListAvocados(data.data);
+            setLength(data.length);
         })
     },[])
     return (
