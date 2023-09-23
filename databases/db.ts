@@ -13,11 +13,12 @@ class Database {
   }
 
   async getById(id: string): Promise<any | null> {
-    if (!Object.prototype.hasOwnProperty.call(allData, id)) {
+    const existProduct = allData.some(product=>product.id === id)
+    if (!existProduct) {
       return null
     }
 
-    const entry = allData[id]
+    const entry = allData.find(product=>product.id == id)
     await randomDelay()
     return entry
   }
