@@ -17,7 +17,6 @@ const ProductItem = () => {
     //     const listAvocadosToStorage = []
     //     localStorage.setItem("avo-store",)
     // }
-    console.log(product)
     return (
         <div className='flex mt-11 justify-around w-full'>
             {product &&
