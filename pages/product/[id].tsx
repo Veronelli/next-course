@@ -1,22 +1,16 @@
 import React, { useEffect } from 'react'
 import { useRouter } from 'next/router'
 import DataBase from 'databases/db'
-import Database from 'databases/db';
+import { MainContext } from 'contexts/MainContext';
 
 const ProductItem = () => {
     const { query: { id } } = useRouter();
     const dataBase = new DataBase();
     const [product, setProduct] = React.useState({});
-
     dataBase.getById(id).then(res => {
         setProduct(res);
     })
 
-    // const addCard = ()=>{
-        
-    //     const listAvocadosToStorage = []
-    //     localStorage.setItem("avo-store",)
-    // }
     return (
         <div className='flex mt-11 justify-around w-full'>
             {product &&
