@@ -13,7 +13,7 @@ class ProductHandeler{
         return JSON.parse(dataString); 
     }
 
-    async setProduct(storageName: string, product: TProduct): Promise<void>{
+    async setProduct(storageName: string, product: Array<TProduct>): Promise<void>{
         const dataString = JSON.stringify(product)
         localStorage.setItem(storageName, dataString);
     }

@@ -1,15 +1,22 @@
 import React, { useEffect } from 'react'
 import { useRouter } from 'next/router'
 import DataBase from 'databases/db'
-import { MainContext } from 'contexts/MainContext';
+import { IPropsMainContext, MainContext } from 'contexts/MainContext';
+import { Main } from 'next/document';
 
 const ProductItem = () => {
+    const {shopCart, setShopCart} = React.useContext<IPropsMainContext>(MainContext);
     const { query: { id } } = useRouter();
     const dataBase = new DataBase();
     const [product, setProduct] = React.useState({});
     dataBase.getById(id).then(res => {
         setProduct(res);
     })
+
+    const setToCartProducts = ()=>{
+        const newProductToCart = [...shopCart, product]
+        setShopCart(newProductToCart)
+    }
 
     return (
         <div className='flex mt-11 justify-around w-full'>
@@ -30,12 +37,12 @@ const ProductItem = () => {
                             </div>
                         </div>
 
-                        <a href={`product/${product.id}`} className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-gray-700 rounded-lg hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-gray-300 dark:bg-gray-600 dark:hover:bg-gray-700 dark:focus:ring-gray-800 w-full">
+                        <button onClick={setToCartProducts} className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-gray-700 rounded-lg hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-gray-300 dark:bg-gray-600 dark:hover:bg-gray-700 dark:focus:ring-gray-800 w-full">
                             <b>COMPRAR</b>
                             <svg className="w- h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
                                 <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
                             </svg>
-                        </a>
+                        </button>
                     </div>
                 </>}
         </div>
