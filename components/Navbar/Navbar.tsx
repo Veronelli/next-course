@@ -11,7 +11,7 @@ const Navbar: React.FC = () => {
                 <Link href='/' className='p-2 rounded-md bg-lime-200'>
                     <h4 className='text-2xl'>🥑</h4>
                 </Link>
-                <Link href='/cart' className='p-2 rounded-md bg-white'>
+                <Link href='/product_cart' className='p-2 rounded-md bg-white'>
                     <h4>🛒 - Carrito ({shopCart?.length})</h4>
                 </Link>
             </menu>
