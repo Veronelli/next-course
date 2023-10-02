@@ -3,7 +3,7 @@ import { Navbar } from "../Navbar/Navbar";
 import style from "./layout.module.css"
 import MainContextProvider from "contexts/MainContext";
 
-const Layout: React.FC = ({children}:React.PropsWithChildren) =>{
+const Layout = ({children}:any) =>{
     return(
         <div className={`${style.container} flex-col`}>
             <MainContextProvider>
