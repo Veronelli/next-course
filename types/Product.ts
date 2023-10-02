@@ -1,10 +1,10 @@
 export interface TProduct {
-    name: string
-    id: string
-    sku: string
-    price: number
-    image: string
-    attributes: Attributes
+    name?: string
+    id?: string
+    sku?: string
+    price?: number
+    image?: string
+    attributes?: Attributes
 }
 
 export interface Attributes {

@@ -3,12 +3,13 @@ import { useRouter } from 'next/router'
 import DataBase from 'databases/db'
 import { IPropsMainContext, MainContext } from 'contexts/MainContext';
 import { Main } from 'next/document';
+import { TProduct } from 'types/Product';
 
 const ProductItem = () => {
     const {shopCart, setShopCart} = React.useContext<IPropsMainContext>(MainContext);
-    const { query: { id } } = useRouter();
+    const { query: { id } }: any = useRouter();
     const dataBase = new DataBase();
-    const [product, setProduct] = React.useState({});
+    const [product, setProduct] = React.useState<TProduct>({});
     dataBase.getById(id).then(res => {
         setProduct(res);
     })
